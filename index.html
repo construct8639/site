@@ -7,8 +7,17 @@
     <meta name="description"
         content="joyjak.party, (or just the jorty) is an imageboard dedicated to the creation, posting, and sharing of joyjaks.">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="stylesheet" media="screen" href="style.css">
     <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
         body.hide-cursor {
             cursor: none;
         }
@@ -57,13 +66,6 @@
         }
 
         #rotate-text {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background: black;
-            overflow: hidden;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-
             position: fixed;
             top: 50%;
             left: 45%;
@@ -88,127 +90,7 @@
 </head>
 
 <body>
-    <div class="boardlist"><span class="sub" data-description="0">[ <a href="#">home</a> / <a href="#">overboard</a>
-            ]</span> <span class="sub" data-description="1">[ <a href="#" title="Joyjaks">joy</a> / <a href="#"
-                title="Question &amp; Answer">qa</a>
-            ]</span> <span class="sub" data-description="5">[
-            <a href="#">rules</a> / <a href="#">pass</a> / <a href="#">bans</a> ]</span></div><br>
-    <h1>joyjak.party</h1>
-    <div class="subtitle"></div>
-    <div class="box-wrap">
-        <div class="box middle">
-            <h2>About</h2>
-            <ul style="text-align: center; margin-top: 8px;">
-                <li>joyjak.party, (or just "the jorty") is an imageboard dedicated to the creation, posting, and sharing
-                    of joyjaks. As the site has grown, it has expanded to encompass many other topics as well.</li><br>
-                <li>Please read the <a href="#">rules</a> before posting.</li>
-                <br><b>The Dailyjak</b>
-                <div id="dailyjak-container"
-                    style="height:380px; display: block; margin-left: auto; margin-right: auto; max-width: 100%; margin-top: 4px; margin-bottom: 0;">
-                    <img src="joyjak.jpg" style="max-width: 100%; max-height: 100%;">
-                </div>
-            </ul>
-        </div>
-        <div class="box middle">
-            <table>
-                <tbody>
-                    <tr>
-                        <th>
-                            <h2>Board</h2>
-                        </th>
-                        <th class="desktop">
-                            <h2>Subtitle</h2>
-                        </th>
-                        <th>
-                            <h2 title="Posts in the last hour">PPH</h2>
-                        </th>
-                        <th>
-                            <h2 title="Number of distinct IPs that have posted in the last 24 hours">Posters</h2>
-                        </th>
-                        <th class="desktop">
-                            <h2>Posts</h2>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td><a href="#">/joy/ - Joyjaks</a></td>
-                        <td class="desktop">you look like this and you say this</td>
-                        <td>349</td>
-                        <td>311</td>
-                        <td class="desktop">3776064</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">/qa/ - Question &amp; Answer</a></td>
-                        <td class="desktop">NAJ, SFW random, blogs, everything</td>
-                        <td>227</td>
-                        <td>518</td>
-                        <td class="desktop">16778626</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="wrapper">
-            <div class="box left">
-                <h2>Recent Images</h2>
-                <ul>
-                    <li><a href="#"><img loading="lazy" src="joyjak2.png" style="width:204px;height:255px" alt=""></a>
-                    </li>
-                    <li><a href="#"><img loading="lazy" src="joyjak.jpg" style="width:177px;height:255px" alt=""></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="box left">
-                <h2>Statistics</h2>
-                <ul>
-                    <li>Total posts: 22,988,753</li>
-                    <li>Unique posters: 0</li>
-                    <li>Active content: 71.57 GB</li>
-                </ul>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="box right">
-                <h2>Latest Posts</h2>
-                <ul>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>&gt;&gt;16778616 &gt;
-                                eating raw potat…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>&gt;&gt;16778613 Why
-                                do you keep ma…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>wow this is
-                                relevant</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>I dont get it lazy as
-                                fuck amo…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>&gt;haha the joke is
-                                transphobia …</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>HEAVENS TO
-                                BETSY…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>&gt;&gt;16778563 He
-                                was writing a t…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>Zooey.</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>&gt;&gt;16778616 Yeah
-                                but you’re ea…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>Nice ev&amp;doe you
-                                should have us…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>&gt;&gt;16772612 You
-                                can eat most p…</em></a></li>
-                    <li><strong>Joyjaks</strong>: <a href="#"><em>&gt;&gt;16778174 (OP)
-                                built for BBC</em></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <footer>
-        <p class="unimportant" style="margin-top:20px;text-align:center;">- Tinyboard + <a href="#">vichan</a> 5.1.4 -
-            <br>Tinyboard Copyright © 2010-2014
-            Tinyboard Development Group <br><a href="#">vichan</a> Copyright ©
-            2012-2023 vichan-devel
-        </p>
-        <p class="unimportant" style="text-align:center;">All trademarks, copyrights, comments, and images on this page
-            are owned by and are the responsibility of their respective parties.</p>
-        <p class="unimportant" style="text-align:center;">Legal inquiries, concerns, and complaints should be emailed to
-            <a href="mailto:legal@soyjak.st">legal@joyjak.st</a>.
-        </p>
-    </footer>
+    <iframe id="coverFrame" src="cover/index.html" allowfullscreen></iframe>
     <div id="clickCatcher"></div>
     <video id="bgVideo" autoplay loop playsinline muted></video>
     <div id="rotate-text">Loading IP...</div>
