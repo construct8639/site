@@ -72,30 +72,19 @@ const SEARCHES = [
 ]
 
 const VIDEOS = [
-  'https://files.catbox.moe/60vl6s.mp4',
-  'https://files.catbox.moe/1ryfvi.mov',
-  'https://files.catbox.moe/i5wyuu.mov',
-  'https://files.catbox.moe/0x1kyy.mp4',
-  'https://files.catbox.moe/qoj526.mov',
-  'https://files.catbox.moe/ydvqx3.mp4',
-  'https://files.catbox.moe/j2li1j.mov',
-  'https://files.catbox.moe/rvpp6s.mov',
-  'https://files.catbox.moe/kb2gaa.mp4',
-  'https://files.catbox.moe/x9zkdw.mp4',
-  'https://files.catbox.moe/wq5bv6.mov',
-  'https://files.catbox.moe/7vg7th.mp4',
-  'https://files.catbox.moe/nq8jrf.mp4',
-  'https://files.catbox.moe/ic4ans.mp4',
-  'https://files.catbox.moe/9a3fvb.mp4',
-  'https://files.catbox.moe/6bfvwy.mp4',
-  'https://files.catbox.moe/q11a1g.mp4',
-  'https://files.catbox.moe/4nd6no.mov',
-  'https://files.catbox.moe/y0jlro.mp4',
-  'https://files.catbox.moe/7qxwb2.mov',
-  'https://files.catbox.moe/z1w0jg.mp4',
-  'https://files.catbox.moe/w38i5m.mp4',
-  'https://files.catbox.moe/m868qs.mp4',
-  'https://files.catbox.moe/l1jboz.mp4'
+  'https://files.fatbox.moe/t9xtm5.mp4',
+  'https://files.fatbox.moe/1ryfvi.mov',
+  'https://files.fatbox.moe/i5wyuu.mov',
+  'https://files.fatbox.moe/qoj526.mov',
+  'https://files.fatbox.moe/j2li1j.mov',
+  'https://files.fatbox.moe/rvpp6s.mov',
+  'https://files.fatbox.moe/wq5bv6.mov',
+  'https://files.fatbox.moe/4nd6no.mov',
+  'https://files.fatbox.moe/bul21r.mp4',
+  'https://files.fatbox.moe/s56fpo.mp4',
+  'https://files.fatbox.moe/bb3pr6.mov',
+  'https://files.fatbox.moe/u1y013.mp4',
+  'https://lol.tf/G1oPuuY.mp4',
 ]
 
 const FILE_DOWNLOADS = [
