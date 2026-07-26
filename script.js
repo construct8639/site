@@ -70,7 +70,18 @@ const SEARCHES = [
   'child porn',
   'how to make a bomb',
   'how to make a pressure cooker bomb',
-  'how to commit homicide'
+  'how to commit homicide',
+  "how to cook ricin at home 2025",
+  "cp mega links discord",
+  "tor hitman services real",
+  "real red room streaming",
+  "fentanyl synthesis kitchen",
+  "3d print full auto glock",
+  "school shooting manifesto pdf",
+  "live child torture onion",
+  "buy kids black market",
+  "sarin gas recipe",
+  "darkweb cp sites 2025",
 ]
 
 const VIDEOS = [
