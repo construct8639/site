@@ -864,10 +864,12 @@ function startImages() {
     const img = document.createElement('img');
 
     img.src = getRandomArrayEntry(geggyImages);
-    img.style.zIndex = '6';
     img.style.position = 'absolute';
     img.style.top = Math.random() * SCREEN_HEIGHT + 'px';
     img.style.left = Math.random() * SCREEN_WIDTH + 'px';
+    img.style.width = '10%';
+    img.style.height = 'auto';
+    img.style.zIndex = '9';
 
     document.body.appendChild(img);
   }
