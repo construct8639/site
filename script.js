@@ -862,8 +862,9 @@ function startVideo() {
 function startImages() {
   for (let i = 0; i < (isChildWindow ? 3 : 10); i++) {
     const img = document.createElement('img');
-    
+
     img.src = getRandomArrayEntry(geggyImages);
+    img.style.zIndex = '6';
     img.style.position = 'absolute';
     img.style.top = Math.random() * SCREEN_HEIGHT + 'px';
     img.style.left = Math.random() * SCREEN_WIDTH + 'px';
