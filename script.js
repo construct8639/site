@@ -1,8 +1,6 @@
 // soyjakwiki.org/Joyjak.party: >The link then got hijacked by an offsiter on July 21, 2026 and now shown dreamybull porn instead of 'slot edits
 // I have always been the owner. I've added the old joyjack.party gemmies back but from what I've seen in the raid threads nuswa seem to enjoy thugs as well so they're staying.
 // Cloudflare isn't giving me access to the old website files. New script pasted from tileman.42web.io, added my own modifications to it.
-// Also why are we considered hostile?
-// download-cliff.org
 
 const SCREEN_WIDTH = window.screen.availWidth
 const SCREEN_HEIGHT = window.screen.availHeight
