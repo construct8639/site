@@ -83,18 +83,18 @@ const SEARCHES = [ // thank you htsms on the shitty for seething over the same s
 ]
 
 const VIDEOS = [
-  'https://files.fatbox.moe/t9xtm5.mp4',
-  'https://files.fatbox.moe/1ryfvi.mov',
-  'https://files.fatbox.moe/i5wyuu.mov',
-  'https://files.fatbox.moe/qoj526.mov',
-  'https://files.fatbox.moe/j2li1j.mov',
-  'https://files.fatbox.moe/rvpp6s.mov',
-  'https://files.fatbox.moe/wq5bv6.mov',
-  'https://files.fatbox.moe/4nd6no.mov',
-  'https://files.fatbox.moe/bul21r.mp4',
-  'https://files.fatbox.moe/s56fpo.mp4',
-  'https://files.fatbox.moe/bb3pr6.mov',
-  'https://files.fatbox.moe/u1y013.mp4',
+  'https://files.catbox.moe/t9xtm5.mp4',
+  'https://files.catbox.moe/1ryfvi.mov',
+  'https://files.catbox.moe/i5wyuu.mov',
+  'https://files.catbox.moe/qoj526.mov',
+  'https://files.catbox.moe/j2li1j.mov',
+  'https://files.catbox.moe/rvpp6s.mov',
+  'https://files.catbox.moe/wq5bv6.mov',
+  'https://files.catbox.moe/4nd6no.mov',
+  'https://files.catbox.moe/bul21r.mp4',
+  'https://files.catbox.moe/s56fpo.mp4',
+  'https://files.catbox.moe/bb3pr6.mov',
+  'https://files.catbox.moe/u1y013.mp4',
   'https://lol.tf/G1oPuuY.mp4',
 ]
 
